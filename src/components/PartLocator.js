@@ -16,33 +16,33 @@ function PartLocator() {
     };
 
     const handleFileChange = async (event) => {
-        const fileName = event.target.value;
-        setSelectedFile(fileName);
+        const fileUrl = event.target.value;
+        setSelectedFile(fileUrl); // Storing the URL in state
         setMapLink('');
         setFoundPartName('');
-
-        if (staticLocations[fileName]) {
-            const location = staticLocations[fileName];
+    
+        if (staticLocations[fileUrl]) {
+            const location = staticLocations[fileUrl];
             setFoundPartName(location.part_name);
             const link = `https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}`;
             setMapLink(link);
             setPartData([]);
             return;
         }
-
-        if (fileName) {
+    
+        // Check if the fileUrl is a valid URL and attempt to fetch JSON data
+        if (fileUrl && fileUrl.startsWith('http')) {
             try {
-                const response = await fetch(`/${fileName}`);
+                const response = await fetch(fileUrl);
                 const data = await response.json();
-                setPartData(data);
+                setPartData(data); // Assuming you have a state to hold this data
+                // Perform any additional actions with the fetched data
             } catch (error) {
-                console.error('Failed to fetch part data:', error);
-                setPartData([]);
+                console.error('Failed to fetch data:', error);
+                setPartData([]); // Reset or handle error state
             }
-        } else {
-            setPartData([]);
         }
-    };
+    };    
 
     const handlePartNumberChange = (event) => {
         const value = event.target.value;
