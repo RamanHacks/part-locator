@@ -91,9 +91,9 @@ function PartLocator() {
                     onChange={handleFileChange}
                 >
                     <MenuItem value="">None</MenuItem>
-                    <MenuItem value="dinara.json">210-Dinara-AC</MenuItem>
-                    <MenuItem value="nokha.json">211-Nokha-AC</MenuItem>
-                    <MenuItem value="karakat.json">213-Karakat-AC</MenuItem>
+                    <MenuItem value="/part-locator/dinara.json">210-Dinara-AC</MenuItem>
+                    <MenuItem value="/part-locator/nokha.json">211-Nokha-AC</MenuItem>
+                    <MenuItem value="/part-locator/karakat.json">213-Karakat-AC</MenuItem>
                     <MenuItem value="Dispatch Centre">Dispatch Centre</MenuItem>
                     <MenuItem value="Receiving Centre">Receiving Centre</MenuItem>
                 </Select>
