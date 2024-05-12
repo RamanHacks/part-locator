@@ -9,7 +9,7 @@ function App() {
           <AppBar position="static" sx={{ backgroundColor: '#003366' }}>
               <Toolbar>
                   <Typography variant="h6" component="div" sx={{ flexGrow: 1, textAlign: 'center' }}>
-                      2024 Karakat Lok Sabha Map Locator
+                      2024 Karakat Lok Sabha Navigator
                   </Typography>
               </Toolbar>
           </AppBar>

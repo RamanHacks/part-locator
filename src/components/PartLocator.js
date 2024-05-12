@@ -82,20 +82,20 @@ function PartLocator() {
     return (
         <Box sx={{ width: '100%', margin: 'auto', textAlign: 'center', mt: 5, px: 3 }}>
             <FormControl fullWidth>
-                <InputLabel id="demo-simple-select-label">Select a File</InputLabel>
+                <InputLabel id="demo-simple-select-label">Where to go?</InputLabel>
                 <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
                     value={selectedFile}
-                    label="Select Centre Type"
+                    label="Where to go?"
                     onChange={handleFileChange}
                 >
                     <MenuItem value="">None</MenuItem>
-                    <MenuItem value="https://ramanhacks.github.io/part-locator/dinara.json">210-Dinara-AC</MenuItem>
-                    <MenuItem value="https://ramanhacks.github.io/part-locator/nokha.json">211-Nokha-AC</MenuItem>
-                    <MenuItem value="https://ramanhacks.github.io/part-locator/karakat.json">213-Karakat-AC</MenuItem>
-                    <MenuItem value="Dispatch Centre">Dispatch Centre</MenuItem>
-                    <MenuItem value="Receiving Centre">Receiving Centre</MenuItem>
+                    <MenuItem value="https://ramanhacks.github.io/part-locator/dinara.json">210-Dinara-AC-Booths</MenuItem>
+                    <MenuItem value="https://ramanhacks.github.io/part-locator/nokha.json">211-Nokha-AC-Booths</MenuItem>
+                    <MenuItem value="https://ramanhacks.github.io/part-locator/karakat.json">213-Karakat-AC-Booths</MenuItem>
+                    <MenuItem value="Dispatch Centre">Dispatch Centre - Natwar, BKG</MenuItem>
+                    <MenuItem value="Receiving Centre">Receiving Centre - Takiya, Sasaram</MenuItem>
                 </Select>
             </FormControl>
             {partData.length > 0 && (
@@ -104,7 +104,7 @@ function PartLocator() {
                         <TextField
                             fullWidth
                             id="part-number-input"
-                            label="Part Number"
+                            label="Booth Number"
                             value={input}
                             onChange={handlePartNumberChange}
                             variant="outlined"
@@ -120,7 +120,7 @@ function PartLocator() {
                             id="autocomplete-part-name"
                             options={partData.map(part => part.part_name)}
                             value={partName}
-                            renderInput={(params) => <TextField {...params} label="Part Name" />}
+                            renderInput={(params) => <TextField {...params} label="Booth Name" />}
                             onInputChange={(event, newInputValue) => setPartName(newInputValue)}
                         />
                     </Grid>
