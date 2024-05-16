@@ -11,8 +11,9 @@ function PartLocator() {
 
     // Static location data
     const staticLocations = {
-        "Dispatch Centre": { part_name: "Natwar, Bikramganj", lat: 25.232489218023193, lng: 84.15211882042063 },
-        "Receiving Centre": { part_name: "Takiya Sasaram", lat: 24.962868, lng: 84.00794 }
+        "Natwar Dispatch Centre": { part_name: "Natwar, Bikramganj", lat: 25.232489218023193, lng: 84.15211882042063 },
+        "Buxar Receiving Centre": { part_name: "Buxar", lat: 25.559996531774747, lng: 83.97295528115723 },
+        "Takiya Receiving Centre": { part_name: "Takiya, Sasaram", lat: 24.962868, lng: 84.00794 }
     };
 
     const handleFileChange = async (event) => {
@@ -94,8 +95,9 @@ function PartLocator() {
                     <MenuItem value="https://ramanhacks.github.io/part-locator/dinara.json">210-Dinara-AC-Booths</MenuItem>
                     <MenuItem value="https://ramanhacks.github.io/part-locator/nokha.json">211-Nokha-AC-Booths</MenuItem>
                     <MenuItem value="https://ramanhacks.github.io/part-locator/karakat.json">213-Karakat-AC-Booths</MenuItem>
-                    <MenuItem value="Dispatch Centre">Dispatch Centre - Natwar, BKG</MenuItem>
-                    <MenuItem value="Receiving Centre">Receiving Centre - Takiya, Sasaram</MenuItem>
+                    <MenuItem value="Natwar Dispatch Centre">Natwar Dispatch Centre - BKG</MenuItem>
+                    <MenuItem value="Buxar Receiving Centre">Buxar Receiving Centre</MenuItem>
+                    <MenuItem value="Takiya Receiving Centre">Receiving Centre - Takiya, Sasaram</MenuItem>
                 </Select>
             </FormControl>
             {partData.length > 0 && (
