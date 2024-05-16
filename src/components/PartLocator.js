@@ -95,9 +95,9 @@ function PartLocator() {
                     <MenuItem value="https://ramanhacks.github.io/part-locator/dinara.json">210-Dinara-AC-Booths</MenuItem>
                     <MenuItem value="https://ramanhacks.github.io/part-locator/nokha.json">211-Nokha-AC-Booths</MenuItem>
                     <MenuItem value="https://ramanhacks.github.io/part-locator/karakat.json">213-Karakat-AC-Booths</MenuItem>
-                    <MenuItem value="Natwar Dispatch Centre">Natwar Dispatch Centre - BKG</MenuItem>
+                    <MenuItem value="Natwar Dispatch Centre">Natwar Dispatch Centre, BKG</MenuItem>
                     <MenuItem value="Buxar Receiving Centre">Buxar Receiving Centre</MenuItem>
-                    <MenuItem value="Takiya Receiving Centre">Receiving Centre - Takiya, Sasaram</MenuItem>
+                    <MenuItem value="Takiya Receiving Centre">Takiya Receiving Centre, Sasaram</MenuItem>
                 </Select>
             </FormControl>
             {partData.length > 0 && (
